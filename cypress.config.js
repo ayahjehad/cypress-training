@@ -8,6 +8,9 @@ module.exports = defineConfig({
     baseUrl :"https://magento.softwaretestingboard.com",
     //viewportHeight:500,
     //viewportWidth:500
-    watchForFileChanges:true
+    watchForFileChanges:true,
+    screenshotOnRunFailure: false,
+    screenshotsFolder: "myscreenshot",
+    video: true
   },
 });

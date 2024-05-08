@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+  
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from failing the test
+    return false
+  })
+Cypress.Commands.add('logintoAdminareademo',()=>{
+    cy.visit("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
+   // cy.get(".field-validation-valid").type("admin@yourstore.com");
+    //cy.get("#Password").type("admin");
+    cy.get(".button-1.login-button").click();
+})
+    
